@@ -7,7 +7,11 @@ const task1 = (str) => {
 
 
 const task2 = (str, length, symbol, toLeft) => {
-    
+    if (toLeft) {
+        return str.padStart(length,symbol);
+    } else {
+        return str.padEnd(length,symbol)
+    }
 }
 
 
@@ -28,4 +32,5 @@ const task3 = (str, separator) => {
   };
 
 console.log(task1('hello'));
+console.log(task2('Hi',600 ,'*',true));
 console.log(task3('hello world kolya', ' '));
